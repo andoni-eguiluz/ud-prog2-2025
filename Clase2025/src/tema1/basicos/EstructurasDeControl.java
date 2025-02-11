@@ -4,7 +4,7 @@ package tema1.basicos;
  * @author andoni.eguiluz @ ingenieria.deusto.es
  */
 public class EstructurasDeControl {
- 
+
 	public static void main(String[] args) {
 		repetitivas();
 		alternativas();
