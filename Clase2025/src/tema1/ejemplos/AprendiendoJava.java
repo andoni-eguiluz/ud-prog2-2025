@@ -11,10 +11,11 @@ public class AprendiendoJava {
 		// calcularElMayor( mayor );
 		// System.out.println( "Mayor: " + mayor );
 		// System.out.println( "Mayor: " + mayor() );
-		// sumaimparesrestapares
+		// sumaimparesrestapares (devolviendo esa suma)
 		// visualizahastaqueunoseamenor
+		// Ejercicio 1.0 a-b-c-d  y  i-j-k-l
 	}
-
+		
 	static int[] vector;
 	
 	// Crea un vector nuevo de 20 posiciones y lo rellena con números aleatorios del 1 al 50
@@ -49,7 +50,7 @@ public class AprendiendoJava {
 	 */
 	static void verHastaMayorQue( int umbralMayor ) {
 		int indice = 0;
-		while (vector[indice] <= umbralMayor) {
+		while (indice < vector.length && vector[indice] <= umbralMayor) {
 			System.out.print( vector[indice] + " " );
 			indice++;
 		}
