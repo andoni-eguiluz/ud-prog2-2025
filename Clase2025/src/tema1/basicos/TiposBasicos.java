@@ -39,47 +39,56 @@ public class TiposBasicos {
 		// varByte1 = 129;  // NO cabe 129 en un byte
 		short varShort;  // 2 bytes -32768 a 32767
 		int varInt; // 4 bytes 
-		System.out.println( java.lang.Integer.MIN_VALUE );  // Sacar a consola los valores mínimo y máximo de un int
-		System.out.println( Integer.MAX_VALUE );
+		System.out.println( "Valor menor de int: " + java.lang.Integer.MIN_VALUE );  // Sacar a consola los valores mínimo y máximo de un int
+		System.out.println( "Valor mayor de int: " + Integer.MAX_VALUE );
 		long varLong; // 8 bytes
 		varLong = 12345678901L;  // L sufijo para literal entero LONG (los literales enteros por defecto son int)
 		// int varintAVerSiCabe = varLong;  No se puede porque no cabe
 		long varLong2 = 1L;
 		int varIntAVerSiCabe = (int) varLong;  // Conversión explícita
-		System.out.println( varLong );
+		System.out.println( "Valor de 12345678901L = " + varLong );
 		varLong = 12_345_678_901L;  // Los subrayados es como si no estuvieran (pueden marcar por ejemplo miles, para lectura)
-		System.out.println( varLong );
-		System.out.println( Long.MIN_VALUE );  // A consola los long mínimo y máximo
-		System.out.println( Long.MAX_VALUE );
-		System.out.println( "Ahora: " + System.currentTimeMillis() );
-		System.out.println( new Date( System.currentTimeMillis() ) );
-		System.out.println( new Date( Long.MAX_VALUE ) );
+		System.out.println( "Valor de 12_345_678_901L = " + varLong );
+		System.out.println( "Valor menor de long: " + Long.MIN_VALUE );  // A consola los long mínimo y máximo
+		System.out.println( "Valor mayor de long: " + Long.MAX_VALUE );
+		System.out.println( "Hora actual en milis: " + System.currentTimeMillis() );
+		System.out.println( "Fecha actual: " + new Date( System.currentTimeMillis() ) );
+		System.out.println( "Fecha máxima: " + new Date( Long.MAX_VALUE ) );
 		// Las declaraciones pueden ser con inicialización (se hace a menudo, es muy cómodo)
 		int varInt2 = 17;
 		
 		// 2 tipos son numéricos reales
 		float f1 = 3.0F; // otra manera (float) 3.2;  // Por defecto 3.2 es double   (4 bytes)
 		double d1 = 3.2;  // (8 bytes)
+		d1 = 0.25E5;  // Literal en formato exponencial: significa 0,25 * 10^5
 		float  f2 = (float) d1;  // conversión explícita
-		System.out.println( Float.MIN_VALUE );
-		System.out.println( Float.MAX_VALUE );
-		System.out.println( Double.MIN_VALUE );
-		System.out.println( Double.MAX_VALUE );
-		// NO COMPARAR CON ==  !=
-		// Cómo comparar dos doubles?  aprox en 3 decimales
+		System.out.println( "Valor menor de float: " + Float.MIN_VALUE );
+		System.out.println( "Valor mayor de float: " + Float.MAX_VALUE );
+		System.out.println( "Valor menor de double: " + Double.MIN_VALUE );
+		System.out.println( "Valor mayor de double: " + Double.MAX_VALUE );
+		// REALES: NO COMPARAR CON ==  !=
+		// Cómo comparar dos doubles?  aproximar en los decimales necesarios
 		double double1 = 5.0031;
 		double double2 = 5.0032;
 		// if (double1==double2) {
+		System.out.println( double1 + " y " + double2 + " son iguales? " + (double1==double2) );
 		if (Math.abs(double2-double1) < 0.001) {
-			System.out.println( "Son iguales");
+			System.out.println( double1 + " y " + double2 + " son *aproximadamente* iguales");
 		}
+		// REALES: NO HAY ERRORES DE VALOR EN EJECUCIÓN
+		System.out.println( "División por cero real: " + (5.0/0.0) );
 		
 		// Los últimos 2 tipos primitivos:
-		boolean varLogica = true; // false solo hay dos literales
-		boolean varLogica2 = (5 < 6) || (4 >= 8);
+		boolean varLogica = true; // true y false, solo hay dos literales
+		boolean varLogica2 = (5 < 6) || (4 >= 8);  // Expresiones lógicas y de comparación aritmética devuelven boolean
+			// Operadores de comparación: <  >  <=  >=  ==  !=
+			// Operadores lógicos 
+			// !    Unario postfijo, negación
+			// && (and) y || (or)    Binarios
 		char car = '5';  // char entre comillas simples y solo un car
-		char car2 = 'A' + 1;
-		System.out.println( car2 );
+		char car2 = 'A' + 1;  // Se pueden sumar y restar valores char, a veces es útil (hay conversión desde byte o short)
+		System.out.println( "Carácter 'A' + 1 = " + car2 );
+		System.out.println( "Carácter 'A' + 32 = " + (char)('A'+32) );
 	}
 
 	// Un poquito de expresiones:
@@ -122,7 +131,12 @@ public class TiposBasicos {
 		}
 		// varByte2 = 1;  // Fuera del bloque no se puede acceder
 		
-		
+		// Las estructuras de control que introducen bloque funcionan también como bloques con variables internas
+		// Por ejemplo el for con contador:
+		for (int i=0; i<20; i++) {
+			// Código de ejemplo
+		}
+		// i = 5;  // Fuera del bloque no tiene ámbito		
 	}
 
 	// Ejemplo de dos métodos sobrecargados. Se llaman igual pero tienen distinta signatura (diferentes parámetros)

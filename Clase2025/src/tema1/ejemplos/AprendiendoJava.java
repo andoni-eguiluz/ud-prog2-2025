@@ -1,5 +1,7 @@
 package tema1.ejemplos;
 
+/** Clase de ejemplo para probar las estructuras de control esenciales de Java
+ */
 public class AprendiendoJava {
 
 	public static void main(String[] args) {
@@ -15,59 +17,8 @@ public class AprendiendoJava {
 		System.out.println( "Suma impares-pares = " + sumaImparesRestaPares() );
 		// visualizahastaqueunoseamenor
 		visualizaHastaQueUnoSeaMenor();
-		// Ejercicio 1.0 a-b-c-d  y  i-j-k-l
 	}
 	
-	public static void visualizaHastaQueUnoSeaMenor() {
-		int i=0;
-		do {
-			System.out.print( vector[i] + " " );
-			i++;
-		} while (i<vector.length && vector[i] > vector[i-1]);
-	}
-	
-	/** Calcula la suma de todos los impares restando todos los pares
-	 * @return	Resultado
-	 */
-	public static int sumaImparesRestaPares() {
-		int suma = 0;
-		for (int dato : vector) {
-			if (dato % 2 == 1) {
-				suma += dato;
-			} else {
-				suma -= dato;
-			}
-		}
-		return suma;
-	}
-
-	/** Calcula el valor mayor del vector y lo devuelve
-	 * @return	El valor mayor
-	 */
-	static int mayor() {
-		int mayor = 0;
-		for (int dato : vector) {
-			if (dato > mayor) {
-				mayor = dato;
-			}
-		}
-		return mayor;
-	}
-		
-	
-	// Java pasa los parámetros por VALOR (copia), no por REFERENCIA
-	// el método NUNCA puede cambiar mis variables
-	// Andoni nos está engañando???
-	static void calcularElMayor( int mayor ) {
-		for (int dato : vector) {
-			if (dato > mayor) {
-				mayor = dato;
-				// System.out.println( "Cambio: " + mayor );
-			}
-		}
-		// System.out.println( "Mayor total:" + mayor );
-	}
-		
 	static int[] vector;
 	
 	// Crea un vector nuevo de 20 posiciones y lo rellena con números aleatorios del 1 al 50
@@ -108,6 +59,57 @@ public class AprendiendoJava {
 		}
 		System.out.println();
 	}
+	
+	/** Calcula el valor mayor del vector y lo devuelve
+	 * @return	El valor mayor
+	 */
+	static int mayor() {
+		int mayor = 0;
+		for (int dato : vector) {
+			if (dato > mayor) {
+				mayor = dato;
+			}
+		}
+		return mayor;
+	}
+		
+	
+	// Java pasa los parámetros por VALOR (copia), no por REFERENCIA
+	// el método NUNCA puede cambiar mis variables
+	// Andoni nos está engañando???
+	static void calcularElMayor( int mayor ) {
+		for (int dato : vector) {
+			if (dato > mayor) {
+				mayor = dato;
+				// System.out.println( "Cambio: " + mayor );
+			}
+		}
+		// System.out.println( "Mayor total:" + mayor );
+	}	
 
+	/** Calcula la suma de todos los impares restando todos los pares
+	 * @return	Resultado
+	 */
+	public static int sumaImparesRestaPares() {
+		int suma = 0;
+		for (int dato : vector) {
+			if (dato % 2 == 1) {
+				suma += dato;
+			} else {
+				suma -= dato;
+			}
+		}
+		return suma;
+	}
+
+	/** Visualiza en consola los elementos del vector hasta que uno sea menor que el anterior. Ese no lo saca y finaliza
+	 */
+	public static void visualizaHastaQueUnoSeaMenor() {
+		int i=0;
+		do {
+			System.out.print( vector[i] + " " );
+			i++;
+		} while (i<vector.length && vector[i] > vector[i-1]);
+	}
 	
 }
