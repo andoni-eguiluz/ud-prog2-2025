@@ -12,7 +12,7 @@ public class CreaVector {
 	
 	public static void main(String[] args) {
 		int[] vector = new int[20];
-		inicializar( vector );
+		CreaVector.inicializar( vector );
 		Recuento.recontar( vector );
 	}
 	
