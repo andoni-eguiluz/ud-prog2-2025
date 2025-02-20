@@ -69,9 +69,9 @@ public class UsandoObjetos {
 		// Y en ese tiempo en el que la variable tiene null en lugar de objeto asociado... qué peligro hay?
 		// Por ejemplo intentemos visualizar el punto si está en coordenadas positivas
 		// Código incorrecto
-//		if (punto3.getX() >= 0 && punto3.getY() >= 0) {
-//			System.out.println( punto3 );
-//		}
+		if (punto3.getX() >= 0 && punto3.getY() >= 0) {
+			System.out.println( punto3 );
+		}
 		// ERROR DE EJECUCIÓN!!!  NullPointerException
 		// Recordáis la "cláusula de protección" del && con falso (en cortocircuito)?
 		// Código correcto:
