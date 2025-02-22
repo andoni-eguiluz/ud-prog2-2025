@@ -3,7 +3,7 @@ package tema1.ejemplos;
 public class UsuarioRedSocial {
 	// Datos (atributos)
 	String nombre = "";
-	private int numSeguidores;
+	int numSeguidores;
 	
 	// Constructores
 	
