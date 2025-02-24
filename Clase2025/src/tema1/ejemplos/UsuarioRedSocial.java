@@ -36,17 +36,5 @@ public class UsuarioRedSocial {
 		return 3.6 * this.numSeguidores;
 	}
 	
-	public int getNumSeguidores() {
-		return numSeguidores;
-	}
-	
-	/** Modifica el número de seguidores. Debe ser positivo o cero
-	 * @param numSeguidores	Número nuevo. Si es negativo, el método no hace ninguna modificación. 
-	 */
-	public void setNumSeguidores( int numSeguidores ) {
-		if (numSeguidores >= 0) {
-			this.numSeguidores = numSeguidores;
-		}
-	}	
 	
 }
