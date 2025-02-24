@@ -35,6 +35,25 @@ public class UsuarioRedSocial {
 	public double calcValorEconomico() {
 		return 3.6 * this.numSeguidores;
 	}
+
+	/** Convierte a string el usuario
+	 * @return	String con el formato nombre+tabulador+nºseguidores
+	 */
+	public String convierteAString() {
+		return this.nombre + "\t" + this.numSeguidores;
+	}
 	
+	public String toString() {
+		return convierteAString();
+	}
+	
+	/** Comprueba si el usuario this se debe ordenar después del usuario2
+	 * Es decir, si tiene this menos seguidores que usuario2
+	 * @param usuario2	Segundo usuario a comparar
+	 * @return	Devuelve true si el this debe ir después que usuario2, false en caso contrario
+	 */
+	public boolean estaDespuesDe( UsuarioRedSocial usuario2 ) {
+		return this.numSeguidores < usuario2.numSeguidores;
+	}
 	
 }
