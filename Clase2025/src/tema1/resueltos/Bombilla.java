@@ -1,5 +1,8 @@
 package tema1.resueltos;
 
+/** Ejercicio 1.15a resuelto
+ * @author andoni.eguiluz at ingenieria.deusto.es
+ */
 public class Bombilla {
 	private boolean estadoEncendido; // si está apagada o encendida (boolean). Por defecto: false
 	private int potenciaEnVatios; // en vatios (int)
