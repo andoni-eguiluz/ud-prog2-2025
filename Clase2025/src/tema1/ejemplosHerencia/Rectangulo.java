@@ -57,4 +57,9 @@ public class Rectangulo {
 		this.color = color;
 	}
 	
+	@Override
+	public String toString() {
+		return xCentro + "," + yCentro;
+	}
+	
 }
