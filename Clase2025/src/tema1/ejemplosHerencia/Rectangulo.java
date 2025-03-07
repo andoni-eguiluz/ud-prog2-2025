@@ -59,7 +59,7 @@ public class Rectangulo {
 	
 	@Override
 	public String toString() {
-		return xCentro + "," + yCentro;
+		return "Rect " + xCentro + "," + yCentro;
 	}
 	
 }
