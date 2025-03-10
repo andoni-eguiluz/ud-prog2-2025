@@ -82,6 +82,9 @@ public class Ejercicio1_0iConObjetos {
 		linkedin.anyadirUsuario( new UsuarioRedSocial( "@BillGates", 6230 ) );
 		System.out.println( linkedin );
 		
+		// Y si quisiéramos crear más redes sociales??
+		// Qué haríamos para tener 5, 6, 7, redes sociales?
+		
 	}
 	
 }
