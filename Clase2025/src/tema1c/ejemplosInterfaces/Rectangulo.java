@@ -76,5 +76,16 @@ public class Rectangulo extends Figura {
 	public void dibujar(VentanaGrafica v) {
 		v.dibujaRect( xCentro-anchura/2.0, yCentro-altura/2.0, anchura, altura, 1.0f, color.getColorAWT() );
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Rectangulo) {
+			Rectangulo rect2 = (Rectangulo) obj;
+			return this.xCentro==rect2.xCentro && this.yCentro==rect2.yCentro
+					&& this.anchura==rect2.anchura && this.altura==rect2.altura;
+		} else {
+			return false;
+		}
+	}
 	
 }

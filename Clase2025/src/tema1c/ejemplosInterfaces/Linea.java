@@ -44,5 +44,16 @@ public class Linea extends Figura {
 				xCentro-longitud/2.0*Math.cos(angulo), yCentro-longitud/2.0*Math.sin(angulo),
 				1.0f, color.getColorAWT() );
 	} 
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Linea) {
+			Linea linea2 = (Linea) obj;
+			return this.xCentro==linea2.xCentro && this.yCentro==linea2.yCentro
+					&& this.angulo==linea2.angulo && this.longitud==linea2.longitud;
+		} else {
+			return false;
+		}
+	}
 	
 }

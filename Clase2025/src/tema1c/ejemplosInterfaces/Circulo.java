@@ -79,7 +79,7 @@ public class Circulo extends Figura {
 
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println( "Pasando por equals con " + this + " y " + obj );
+		// System.out.println( "Pasando por equals con " + this + " y " + obj );
 		// return super.equals(obj);
 		if (obj instanceof Circulo) {
 			Circulo circulo2 = (Circulo) obj;
