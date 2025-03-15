@@ -2,7 +2,7 @@ package tema1c.ejemplosInterfaces;
 
 import utils.ventanas.ventanaBitmap.VentanaGrafica;
 
-public class Linea extends Figura {
+public class Linea extends Figura implements Rotable {
 	private int longitud;
 	private double angulo;
 	
@@ -55,5 +55,12 @@ public class Linea extends Figura {
 			return false;
 		}
 	}
+
+	@Override
+	public void rotar(double angulo) {
+		this.angulo += angulo;
+	}
+
+	
 	
 }

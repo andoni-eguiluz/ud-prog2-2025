@@ -61,6 +61,7 @@ public class PruebaFiguras {
 		lFiguras.add( l1 );
 		lFiguras.addAll( lR );
 		lFiguras.add( new Circulo(10) );
+		lFiguras.add( new Imagen( 250, 150, 200, 100, "logo-chatgpt.png" ));
 		
 		double sumPerims = 0;
 		int sumRadios = 0;
@@ -78,6 +79,29 @@ public class PruebaFiguras {
 		}
 		System.out.println( "Perímetro total: " + sumPerims );
 		System.out.println( "Radio total: " + sumRadios );
+		
+		// Rotar todo lo rotable una vuelta completa
+		// 100 veces roto 2PI / 100
+		//v.getJFrame().setLocation( 2000, 100 );
+		for (int i=0; i<100; i++) {
+			v.borra();
+			for (Figura fig : lFiguras) {
+				// fig.rotar no puedo
+//				if (fig instanceof Linea) {
+//					((Linea)fig).rotar( 2*Math.PI/100.0 );
+//					fig.dibujar(v);
+//				} else if (fig instanceof Imagen) {
+//					((Imagen)fig).rotar( 2*Math.PI/100.0 );
+//					fig.dibujar(v);
+//				}
+				if (fig instanceof Rotable) {
+					((Rotable)fig).rotar( 2*Math.PI/100.0 );
+					fig.dibujar(v);
+				}
+			}
+			v.espera( 50 );
+		}
+		
 	}
 	
 }
