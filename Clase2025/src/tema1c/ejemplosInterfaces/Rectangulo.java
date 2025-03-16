@@ -74,7 +74,7 @@ public class Rectangulo extends Figura {
 
 	@Override
 	public void dibujar(VentanaGrafica v) {
-		v.dibujaRect( xCentro-anchura/2.0, yCentro-altura/2.0, anchura, altura, 1.0f, color.getColorAWT() );
+		v.dibujaRect( xCentro-anchura/2.0, yCentro-altura/2.0, anchura, altura, 2.0f, color.getColorAWT() );
 	}
 
 	@Override

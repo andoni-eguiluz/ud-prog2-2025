@@ -42,7 +42,7 @@ public class Linea extends Figura implements Rotable {
 	public void dibujar(VentanaGrafica v) {
 		v.dibujaLinea( xCentro+longitud/2.0*Math.cos(angulo), yCentro+longitud/2.0*Math.sin(angulo),
 				xCentro-longitud/2.0*Math.cos(angulo), yCentro-longitud/2.0*Math.sin(angulo),
-				1.0f, color.getColorAWT() );
+				2.0f, color.getColorAWT() );
 	} 
 
 	@Override

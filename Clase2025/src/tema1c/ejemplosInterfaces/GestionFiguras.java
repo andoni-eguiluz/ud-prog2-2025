@@ -22,7 +22,11 @@ public class GestionFiguras {
 		while (!vent.estaCerrada()) {
 			Point click = vent.esperaAClick();
 			// System.out.println( click );
-			if (vent.getCodTeclaQueEstaPulsada() == KeyEvent.VK_CONTROL) {
+			if (click==null) {
+				if (!vent.estaCerrada()) {
+					JOptionPane.showMessageDialog( null, "El drag no funciona en esta aplicación" );
+				}
+			} else if (vent.getCodTeclaQueEstaPulsada() == KeyEvent.VK_CONTROL) {
 				// Crear un círculo pidiendo el radio
 				String resp = JOptionPane.showInputDialog( "Dame el radio:" );
 				System.out.println( resp );
@@ -31,7 +35,10 @@ public class GestionFiguras {
 				Circulo c = new Circulo( click.x, click.y, Color.AZUL, radio );
 				anyadirFigura( c );
 			} else {
-				// TODO
+				Figura f = Figura.creaFiguraInteractiva( click );
+				if (f!=null) {
+					anyadirFigura( f );
+				}
 			}
 		}
 	}

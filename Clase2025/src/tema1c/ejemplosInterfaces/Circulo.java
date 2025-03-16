@@ -6,7 +6,7 @@ public class Circulo extends Figura {
 //	private int xCentro;
 //	private int yCentro;
 //	private Color color;
-	private int radio = 5;
+	private int radio = 75;
 
 	public Circulo(int xCentro, int yCentro, Color color, int radio) {
 		super( xCentro, yCentro, color );
@@ -26,11 +26,10 @@ public class Circulo extends Figura {
 	}
 	
 	/** Crea un círculo en la coordenada 10,10
-	 * amarillo y de radio 5
+	 * amarillo y de radio 75
 	 */ 
 	public Circulo() {
 		super( 10, 10, Color.AMARILLO );
-		radio = 5;
 	}
 	
 	
@@ -74,7 +73,7 @@ public class Circulo extends Figura {
 	
 	@Override
 	public void dibujar(VentanaGrafica v) {
-		v.dibujaCirculo( xCentro, yCentro, radio, 1.0f, color.getColorAWT() );
+		v.dibujaCirculo( xCentro, yCentro, radio, 2.0f, color.getColorAWT() );
 	}
 
 	@Override
