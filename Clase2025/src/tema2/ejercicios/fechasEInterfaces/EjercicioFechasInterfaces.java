@@ -49,7 +49,7 @@ public class EjercicioFechasInterfaces {
 		// Salida esperada: Marvel: [Iron Man (1) - 02/05/08, The Incredible Hulk (1) - 13/06/08, Iron Man 2 (1) - 07/05/10, Thor (1) - 06/05/11, Captain America: The First Avenger (1) - 22/07/11, The Avengers (1) - 04/05/12, Iron Man 3 (2) - 03/05/13, Thor: The Dark World (2) - 08/11/13, Captain America: The Winter Soldier (2) - 04/04/14, Guardianes de la Galaxia (2) - 01/08/14, Avengers: Age of Ultron (2) - 01/05/15, Ant-Man (2) - 17/07/15, Capitán América: Civil War (3) - 06/05/16, Doctor Strange (3) - 04/11/16, Guardianes de la Galaxia vol. 2 (3) - 05/05/17, Spider-Man: Homecoming (3) - 07/07/17, Thor: Ragnarok (3) - 03/11/17, Black Panther (3) - 16/02/18, Avengers: Infinity War (3) - 27/04/18, Ant-Man and the Wasp (3) - 06/07/18, Capitana Marvel (3) - 08/03/19, Avengers: Endgame (3) - 26/04/19, Spider-Man: Lejos de casa (3) - 04/07/19]
 
 		System.out.println( "\nRecorrido con iterator:" );
-		// TODO - Recorrido con un iterator de saga (que implemente Iterable)
+		// TODO - Recorrido con un iterator de saga
 		
 		System.out.println( "\nRecorrido con iterable sacando días de diferencia entre películas:" );
 		// TODO - Recorrido directo de la saga con un for each
